@@ -26,8 +26,8 @@ fn read_credentials() -> (String, String) {
 }
 
 fn get_days_to() {
-    let start_date = Utc.with_ymd_and_hms(2023, 8, 31, 0, 0, 0).unwrap();
-    let end_date = Utc.with_ymd_and_hms(2023, 12, 8, 0, 0, 0).unwrap();
+    let start_date: DateTime<Utc> = Utc::now();
+    let end_date: DateTime<Utc> = Utc.with_ymd_and_hms(2023, 12, 8, 0, 0, 0).unwrap();
 
     let duration = get_days_between(start_date, end_date);
 
